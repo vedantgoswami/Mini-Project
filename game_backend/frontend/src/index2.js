@@ -1,0 +1,1 @@
+import App2 from "./components/App2";

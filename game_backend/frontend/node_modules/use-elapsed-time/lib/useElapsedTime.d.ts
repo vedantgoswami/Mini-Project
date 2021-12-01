@@ -1,0 +1,2 @@
+import type { Props, ReturnValue } from './types';
+export declare const useElapsedTime: ({ isPlaying, duration, onComplete, autoResetKey, startAt, }: Props) => ReturnValue;

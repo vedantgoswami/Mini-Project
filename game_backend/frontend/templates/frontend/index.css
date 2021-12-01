@@ -1,0 +1,61 @@
+
+.game-area {
+  position: relative;
+  margin: 0px;
+  width: 500px;
+  height: 500px;
+  border: 2px solid #000;
+}
+
+.snake-dot {
+  position: absolute;
+  width: 2%;
+  height: 2%;
+  background-color: #000;
+  border: 1px solid #fff;
+  z-index: 2;
+}
+
+.snake-food {
+  position: absolute;
+  width: 2%;
+  height: 2%;
+  background-color:red;
+  border: 1px solid #fff;
+  z-index: 1;
+}
+.score-text{
+  color: black;
+  background-color: white;
+}
+
+.split {
+  height: 100%;
+  width: 90%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 20px;
+  background-color:white;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color: lightgreen;
+}
+.h-align{
+  left: 50px;
+  font-family: cursive;
+  font-weight: bolder;
+}
+.score{
+  background-color: chartreuse;
+  
+}

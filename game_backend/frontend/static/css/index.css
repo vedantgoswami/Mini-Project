@@ -1,0 +1,383 @@
+html,body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    padding: 0;
+    
+}
+#main {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+
+}
+#app{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.game-area {
+    position: relative;
+    margin: 0px;
+    width: 680px;
+    height: 680px;
+    border: 2px solid #000;
+  }
+  
+  .snake-dot {
+    position: absolute;
+    width: 2%;
+    height: 2%;
+    background-color: #000;
+    border: 1px solid #fff;
+    z-index: 2;
+  }
+  
+  .snake-food {
+    position: absolute;
+    width: 2%;
+    height: 2%;
+    background-color:red;
+    border: 1px solid #fff;
+    z-index: 1;
+  }
+  .score-text{
+    color: black;
+    background-color: white;
+  }
+  
+  .split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+    
+  }
+  
+  /* Control the left side */
+  .left {
+    left: 20px;
+    background-color:white;
+  }
+  
+  /* Control the right side */
+  .right {
+    right: 0;
+    background-color: white;
+  }
+  .h-align{
+    left: 50px;
+    font-family: cursive;
+    font-weight: bolder;
+  }
+  .score{
+    background-color: red;
+    width: 100px;
+    align-content: center;
+    text-align: center;
+    height: 50px;
+    font-size: 30px;
+    padding-top: 5px;
+    color: black;
+    font-weight: bolder;
+  }
+  .third-comp {
+    background-color: lightgray;
+    border: 1px solid red;
+    border-radius: 5px;
+    padding: 10px;
+    width: 400px;
+    text-align: center;
+    cursor: pointer;
+    color: green;
+  }
+  
+  #increment-component button {
+    background-color: black;
+    font-size: 16px;
+    border-color: transparent;
+    border-radius: 3px;
+    padding: 5px;
+  }
+  
+  #increment-component input {
+    font-size: 16px;
+    margin: 0px 5px;
+    text-align: center;
+    width: 50px;
+  }
+  
+  #increment-component sub {
+    color: red;
+    font-weight: bold;
+    padding-left: 5px;
+  }
+ 
+
+@font-face {
+  font-family: 'Rampart One';
+  src: local("RampartOne"),
+  url("./fonts/RampartOne-Regular.ttf") format("truetype");;
+}
+
+.container{
+  position: relative;
+  width: 150px;
+  height: 80px;
+  border-radius: 40px;
+  border: 3px solid rgba(41, 39, 39, 0.2);
+  transition: 0.5s;
+}
+.container:hover{
+  width: 180px;
+  border: 3px solid rgb(0, 0, 0);
+}
+
+.container .next{
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-top: 3px solid rgba(0, 0, 0, 0.2);
+  border-left: 3px solid rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  transform: translateY(-50%) rotate(135deg);
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.container:hover .next{
+  opacity: 1;
+  right: 20px;
+  
+
+}
+.container .next:hover{
+  border-top: 3px solid rgba(0, 0, 0, 1);
+  border-left: 3px solid rgba(0, 0, 0,1);
+}
+.container .prev{
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-top: 3px solid rgba(0, 0, 0, 0.2);
+  border-left: 3px solid rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  transform: translateY(-50%) rotate(315deg);
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.5s;
+}
+.container:hover .prev{
+  opacity: 1;
+  left: 20px;
+}
+.container .prev:hover{
+  border-top: 3px solid rgba(0, 0, 0, 1);
+  border-left: 3px solid rgba(0, 0, 0,1);
+}
+#box span
+{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 46px;
+    color: #FF5733;
+    font-size: 36px;
+    font-family: sans-serif;
+    font-weight: 900;
+    user-select: none;
+    margin-top: 14px;
+    transition: 0.2s;
+}
+.container:hover #box span{
+  font-size: 48px;
+}
+.reset{
+  position: relative;
+  width: 120px;
+  height: 60px;
+  transition: 0.5s;
+  border-radius: 20px;
+  background-color: rgb(178, 224, 85);
+  opacity: 1;
+  transition: 0.2s;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.reset:hover{
+  cursor: pointer;
+}
+
+
+.modal {
+  font-size: 12px;
+  width: 650px;
+  height: 350px;
+  color: #ffffff;
+  background-color: black;
+  align-content: center;
+}
+.modal > .header {
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+  padding: 5px;
+}
+.modal > .content {
+  text-align: center;
+  width: 100%;
+  padding: 10px 5px;
+  font-size: 72px;
+}
+.modal > .actions {
+  width: 100%;
+  padding: 10px 5px;
+  margin: auto;
+  text-align: center;
+}
+.modal > .close {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 20px;
+  right: -10px;
+  top: -10px;
+  font-size: 24px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #cfcece;
+}
+.button{
+  background-color: coral;
+}
+.react-confirm-alert-blur {
+  filter: url(#gaussian-blur);
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+}
+
+.react-confirm-alert-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: rgba(255, 255, 255, 0.9);
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  opacity: 0;
+  -webkit-animation: react-confirm-alert-fadeIn 0.5s 0.2s forwards;
+  -moz-animation: react-confirm-alert-fadeIn 0.5s 0.2s forwards;
+  -o-animation: react-confirm-alert-fadeIn 0.5s 0.2s forwards;
+  animation: react-confirm-alert-fadeIn 0.5s 0.2s forwards;
+}
+
+.react-confirm-alert-body {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 400px;
+  padding: 30px;
+  text-align: left;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 20px 75px rgba(0, 0, 0, 0.13);
+  color: #666;
+}
+
+.react-confirm-alert-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.react-confirm-alert-body > h1 {
+  margin-top: 0;
+}
+body.react-confirm-alert-body-element {
+  overflow: hidden;
+}
+.react-confirm-alert-body > h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.react-confirm-alert-button-group {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+.react-confirm-alert-button-group > button {
+  outline: none;
+  background: #333;
+  border: none;
+  display: inline-block;
+  padding: 6px 18px;
+  color: #eee;
+  margin-right: 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+@-webkit-keyframes react-confirm-alert-fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes react-confirm-alert-fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes react-confirm-alert-fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes react-confirm-alert-fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
